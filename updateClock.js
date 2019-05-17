@@ -1,35 +1,12 @@
-const hour = document.querySelector('.hour');
-const min = document.querySelector('.min');
-const second = document.querySelector('.second');
+const BR = document.querySelector('.BR');
+const IT = document.querySelector('.IT');
 
 function setDate() {
-  const now = new Date();
+  const horarioBR = moment().tz("America/Sao_Paulo").format('HH:mm:ss');
+  const horarioIT = moment().tz("Europe/Rome").format('HH:mm:ss');
 
-  // seconds
-  const seconds = now.getSeconds();
-  if (seconds <= 9) {
-    second.innerHTML = "0" + seconds;
-  }else{
-    second.innerHTML = seconds;
-  }
-
-  //minutes
-  const minutes = now.getMinutes();
-  if (minutes <= 9) {
-    min.innerHTML = "0" + minutes + ":";
-  } else {
-    min.innerHTML = minutes + ":";
-  }
-  //hours
-  const hours = now.getHours();
-  if (hours <= 9) {
-    hour.innerHTML = "0" + hours + ":";
-  } else {
-    hour.innerHTML = hours + ":";
-  }
+  BR.innerHTML = "BR SP " + horarioBR;
+  IT.innerHTML = "IT ROME " + horarioIT;
 }
 
 setInterval(setDate, 1000);
-// setDate();
-
-console.log(moment().tz("America/Los_Angeles").format())

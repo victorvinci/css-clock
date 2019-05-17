@@ -31,3 +31,5 @@ function setDate() {
 
 setInterval(setDate, 1000);
 // setDate();
+
+console.log(moment().tz("America/Los_Angeles").format())

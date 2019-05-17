@@ -1,6 +1,4 @@
 html {
-  background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-  background-size: cover;
   font-family: 'helvetica neue';
   text-align: center;
   font-size: 10px;
@@ -8,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  font-size: 2rem;
+  font-size: 20rem;
   display: flex;
   flex: 1;
   min-height: 100vh;
@@ -16,10 +14,7 @@ body {
 }
 
 .clock {
-  width: 30rem;
-  height: 30rem;
-  border: 20px solid white;
-  border-radius: 50%;
+  border: 1px solid white;
   margin: 50px auto;
   position: relative;
   padding: 2rem;
@@ -31,13 +26,13 @@ body {
 }
 
 .clock-face {
+  display: flex;
   position: relative;
   width: 100%;
   height: 100%;
-  transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
-.hand {
+/* .hand {
   width: 50%;
   height: 6px;
   background: black;
@@ -45,6 +40,6 @@ body {
   top: 50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  /* transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
-}
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+} */

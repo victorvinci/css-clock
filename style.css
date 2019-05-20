@@ -26,37 +26,48 @@ time {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 .container-brasil{
-  padding: 25px;
-  width: 50%;
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: deeppink;
+  transition: ease-in 0.5s;
 }
 
 .container-italia{
-  padding: 25px;
-  width: 50%;
+  position: absolute;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   background-color: cornflowerblue;
+  transition: ease-in 0.5s;
 }
 
-.info{
+.info-br{
   font-size: 5rem;
   margin: 10px;
   padding: 1px;
+  display: none;
+  transition: ease-in 0.5s;
+}
+
+.info-it{
+  font-size: 5rem;
+  margin: 10px;
+  padding: 1px;
+  display: none;
+  transition: ease-in 0.5s;
 }
 
 .talk{
-  z-index: 99999;
+  z-index: 5;
   position: absolute;
-  top: 0;
   bottom: 0;
   right: 0;
   left: 0;
@@ -65,5 +76,39 @@ time {
   align-items: center;
   margin: 0;
   padding: 0;
-  min-height: 25vh;
+  height: 100vh;
 }
+
+.shrink{
+  height: 100vh;
+  width: 50vw;
+  transition: ease-in 0.5s;
+}
+
+.talk-shrink{
+  height: 25vh;
+  transition: ease-in 0.5s;
+}
+
+.talk-zero-height{
+  height: 10vh;
+}
+
+.expand{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  transition: ease-in 0.5s;
+  z-index: 4;
+}
+
+.expand-infos{
+  display: block;
+  transition: ease-in 0.5s;
+}
+
+.hide{
+  display: none;
+  transition: ease-in 0.5s;
+}
+

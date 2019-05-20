@@ -5,9 +5,17 @@ const infosBR = document.querySelectorAll('.info-br');
 const infosIT = document.querySelectorAll('.info-it');
 
 talk.addEventListener('click', function expandTalk() {
-  if (!this.classList.contains('talk-shrink')) {
+  if (!this.classList.contains('talk-shrink') && document.querySelectorAll('.expand').length > 0) {
+    this.classList.add('talk-zero-height');
+    this.classList.add('talk-shrink');
+  } else if (!this.classList.contains('talk-shrink')) {
     this.style.transition = 'ease-in 0.5s';
     this.classList.add('talk-shrink');
+  } else if (this.classList.contains('talk-zero-height')){
+    this.classList.remove('talk-zero-height');
+    this.classList.remove('talk-shrink');
+  } else if (!this.classList.contains('talk-shrink') && document.querySelectorAll('.expand').length > 0) {
+    this.classList.add('talk-zero-height');
   } else {
     this.classList.remove('talk-shrink');
   }

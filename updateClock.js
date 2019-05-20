@@ -1,9 +1,9 @@
 moment.tz.setDefault("America/Sao_Paulo"); //set this as default due '.to' not working with '.tz' method
 
-const BR = document.querySelector('.BR');
-const IT = document.querySelector('.IT');
-const dormeIT = document.querySelector('.dormeIT');
-const dormeBR = document.querySelector('.dormeBR');
+const BR = document.querySelector('.br');
+const IT = document.querySelector('.it');
+const dormeIT = document.querySelector('.dorme-it');
+const dormeBR = document.querySelector('.dorme-br');
 const dayTimeBR = document.querySelector('.day-time-br');
 const dayTimeIT = document.querySelector('.day-time-it');
 const talkTime = document.querySelector('.talk');
@@ -14,10 +14,10 @@ let talkIT = Boolean;
 
 function getDateBR() {
   const horarioBR = moment().subtract(1, 'hour').format('HH:mm:ss');
-  const horaBR = moment().subtract(1, 'hour').format('HH');
-  const dormirBR = moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss").add(1, 'day')); //1h am
+  const horaBR = moment().subtract(1, 'hour').format('HH'); //this exists for conditionals
+  const dormirBR = moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss").add(1, 'day')); // calculate the amount of hours until the next time to sleep
 
-  BR.innerHTML = "BR CG " + horarioBR;
+  BR.innerHTML = horarioBR;
 
   if (horaBR > 06 && horaBR <= 18) {
     dayTimeBR.innerHTML = "There is sun";
@@ -28,8 +28,8 @@ function getDateBR() {
   if (horaBR >= 01 && horaBR < 09) {
     dormeBR.innerHTML = "Sleeping";
     talkBR = false;
-  } else if (horaBR >= 18) { //there is a bug when the moment's clock reachs 19:00. This seems to solve it
-    dormeBR.innerHTML = "Sleep " + moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss"));
+  } else if (horaBR >= 18) { 
+    dormeBR.innerHTML = "Sleep " + moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss")); //there is a bug when the moment's clock reachs 19:00. This seems to fix it
     talkBR = true;
   } else {
     dormeBR.innerHTML = "Sleep " + dormirBR;
@@ -42,10 +42,10 @@ function getDateBR() {
 
 function getDateIT() {
   const horarioIT = moment().add(5, 'hour').format('HH:mm:ss'); // add +5 for Rome timezone
-  const horaIT = moment().add(5, 'hour').format('HH');
+  const horaIT = moment().add(5, 'hour').format('HH'); //this exists for conditionals
   const dormirIT = moment().add(5, 'hour').to(moment("03:00:00", "HH:mm:ss").add(1, 'day')); // calculate the amount of hours until the next time to sleep
 
-  IT.innerHTML = "IT ROME " + horarioIT;
+  IT.innerHTML = horarioIT;
 
   if (horaIT > 06 && horaIT <= 19) {
     dayTimeIT.innerHTML = "There is sun";

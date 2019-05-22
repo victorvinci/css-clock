@@ -7,6 +7,8 @@ const clockIT = document.querySelector('.it');
 const dormeIT = document.querySelector('.dorme-it');
 const dormeBR = document.querySelector('.dorme-br');
 const dayTimeBR = document.querySelector('.day-time-br');
+const dayTimePicBR = document.querySelector('.day-time-pic-br');
+const dayTimePicIT = document.querySelector('.day-time-pic-it');
 const dayTimeIT = document.querySelector('.day-time-it');
 const talkTime = document.querySelector('.talk');
 const meiaNoite = moment("00", "HH").format('HH');
@@ -23,8 +25,10 @@ function getDateBR() {
 
   if (horaBR > 06 && horaBR <= 18) {
     dayTimeBR.innerHTML = "There is sun";
+    dayTimePicBR.innerHTML = "<img src='./img/sun.png'>";
   } else {
     dayTimeBR.innerHTML = "Sun is gone";
+    dayTimePicBR.innerHTML = "<img src='./img/moon.png'>";
   }
   
   if (horaBR >= 01 && horaBR < 09) {
@@ -52,8 +56,10 @@ function getDateIT() {
 
   if (horaIT > 06 && horaIT <= 19) {
     dayTimeIT.innerHTML = "There is sun";
+    dayTimePicIT.innerHTML = "<img src='./img/sun.png'>";
   } else {
     dayTimeIT.innerHTML = "Sun is gone";
+    dayTimePicIT.innerHTML = "<img src='./img/moon.png'>";
   }
 
   if (horaIT >= 03 && horaIT < 11) {

@@ -4,6 +4,8 @@ const containerBR = document.querySelector('.container-brasil');
 const containerIT = document.querySelector('.container-italia');
 const infosBR = document.querySelectorAll('.info-br');
 const infosIT = document.querySelectorAll('.info-it');
+const picBR = document.querySelector('.day-time-pic-br');
+const picIT = document.querySelector('.day-time-pic-it');
 
 talk.addEventListener('click', function expandTalk() {
   if (!this.classList.contains('talk-shrink') && document.querySelectorAll('.expand').length > 0) {
@@ -37,6 +39,7 @@ containerBR.addEventListener('click', function expandBR() {
       containerIT.classList.add('hide');
       infosBR[0].classList.add('expand-infos');
       infosBR[1].classList.add('expand-infos');
+      picBR.classList.add('expand-infos');
       talk.classList.add('talk-zero-height');
     }, 500);
   } else {
@@ -45,6 +48,7 @@ containerBR.addEventListener('click', function expandBR() {
     containerIT.classList.remove('hide');
     infosBR[0].classList.remove('expand-infos');
     infosBR[1].classList.remove('expand-infos');
+    picBR.classList.remove('expand-infos');
     containerIT.style['z-index'] = '-1';
     talk.classList.remove('talk-zero-height');
     setTimeout(function() {
@@ -61,6 +65,7 @@ containerIT.addEventListener('click', function expandIT() {
       containerBR.classList.add('hide');
       infosIT[0].classList.add('expand-infos');
       infosIT[1].classList.add('expand-infos');
+      picIT.classList.add('expand-infos');
       talk.classList.add('talk-zero-height');
     }, 500);
   } else {
@@ -69,6 +74,7 @@ containerIT.addEventListener('click', function expandIT() {
     this.classList.remove('expand');
     infosIT[0].classList.remove('expand-infos');
     infosIT[1].classList.remove('expand-infos');
+    picIT.classList.remove('expand-infos');
     talk.classList.remove('talk-zero-height');
   }
 });

@@ -1,7 +1,9 @@
 moment.tz.setDefault("America/Sao_Paulo"); //set this as default due '.to' not working with '.tz' method
 
-const BR = document.querySelector('.br');
-const IT = document.querySelector('.it');
+const bgBR = document.querySelector('.container-brasil');
+const bgIT = document.querySelector('.container-italia');
+const clockBR = document.querySelector('.br');
+const clockIT = document.querySelector('.it');
 const dormeIT = document.querySelector('.dorme-it');
 const dormeBR = document.querySelector('.dorme-br');
 const dayTimeBR = document.querySelector('.day-time-br');
@@ -17,7 +19,7 @@ function getDateBR() {
   const horaBR = moment().subtract(1, 'hour').format('HH'); //this exists for conditionals
   const dormirBR = moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss").add(1, 'day')); // calculate the amount of hours until the next time to sleep
 
-  BR.innerHTML = horarioBR;
+  clockBR.innerHTML = horarioBR;
 
   if (horaBR > 06 && horaBR <= 18) {
     dayTimeBR.innerHTML = "There is sun";
@@ -27,6 +29,7 @@ function getDateBR() {
   
   if (horaBR >= 01 && horaBR < 09) {
     dormeBR.innerHTML = "Sleeping";
+    bgBR.style.backgroundColor = 'slategray';
     talkBR = false;
   } else if (horaBR >= 18) { 
     dormeBR.innerHTML = "Sleep " + moment().subtract(1, 'hour').to(moment("01:00:00", "HH:mm:ss")); //there is a bug when the moment's clock reachs 19:00. This seems to fix it
@@ -45,7 +48,7 @@ function getDateIT() {
   const horaIT = moment().add(5, 'hour').format('HH'); //this exists for conditionals
   const dormirIT = moment().add(5, 'hour').to(moment("03:00:00", "HH:mm:ss").add(1, 'day')); // calculate the amount of hours until the next time to sleep
 
-  IT.innerHTML = horarioIT;
+  clockIT.innerHTML = horarioIT;
 
   if (horaIT > 06 && horaIT <= 19) {
     dayTimeIT.innerHTML = "There is sun";
@@ -55,6 +58,7 @@ function getDateIT() {
 
   if (horaIT >= 03 && horaIT < 11) {
     dormeIT.innerHTML = "Sleeping";
+    bgIT.style.backgroundColor = 'slategray';
     talkIT = false;
   } else if (horaIT <= 02) {
     dormeIT.innerHTML = "Sleep " + moment().add(5, 'hour').to(moment("03:00:00", "HH:mm:ss")); //prevents odd bug when clock reachs 00:30 IT time
@@ -71,9 +75,9 @@ setInterval(getDateBR, 1000);
 setInterval(getDateIT, 1000);
 
 if (getDateBR() === true && getDateIT() === true){
-  talkTime.innerHTML = "talk time";
+  talkTime.innerHTML = "TALK TIME";
   talkTime.style.backgroundColor = "greenyellow";
 } else {
-  talkTime.innerHTML = "not a good time";
+  talkTime.innerHTML = "NOT A GOOD TIME";
   talkTime.style.backgroundColor = "salmon";
 }

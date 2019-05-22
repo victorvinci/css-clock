@@ -1,5 +1,5 @@
 html {
-  font-family: 'helvetica neue';
+  font-family: 'Righteous', cursive;
   font-size: 16px;
 }
 
@@ -18,10 +18,18 @@ h2 {
 time {
   background-color: antiquewhite;
   border-radius: 20px;
-  margin: 10px;
+  margin: 30px 10px;
   padding: 5px;
   font-size: 10rem;
   mix-blend-mode: hard-light;
+}
+
+.br{
+  box-shadow: 10px 10px black;
+}
+
+.it{
+  box-shadow: -10px 10px black;
 }
 
 .main-container{
@@ -52,22 +60,30 @@ time {
 }
 
 .info-br{
+  background-color: antiquewhite;
   font-size: 5rem;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   padding: 1px;
   display: none;
   transition: ease-in 0.5s;
+  box-shadow: 10px 10px black;
+  mix-blend-mode: hard-light;
 }
 
 .info-it{
+  background-color: antiquewhite;
   font-size: 5rem;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   padding: 1px;
   display: none;
   transition: ease-in 0.5s;
+  box-shadow: -10px 10px black;
+  mix-blend-mode: hard-light;
 }
 
 .talk{
+  font-family: 'Bungee Shade', cursive;
+  letter-spacing: 5px;
   z-index: 5;
   position: absolute;
   bottom: 0;

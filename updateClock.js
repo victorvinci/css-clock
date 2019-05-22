@@ -33,6 +33,7 @@ function getDateBR() {
   
   if (horaBR >= 01 && horaBR < 09) {
     dormeBR.innerHTML = "Sleeping";
+    dormeBR.style.backgroundColor = 'salmon';
     bgBR.style.backgroundColor = 'slategray';
     talkBR = false;
   } else if (horaBR >= 18) { 
@@ -64,6 +65,7 @@ function getDateIT() {
 
   if (horaIT >= 03 && horaIT < 11) {
     dormeIT.innerHTML = "Sleeping";
+    dormeIT.style.backgroundColor = 'salmon';
     bgIT.style.backgroundColor = 'slategray';
     talkIT = false;
   } else if (horaIT <= 02) {

@@ -67,6 +67,7 @@ time {
   align-items: flex-start;
   background-color: deeppink;
   transition: ease-in 0.5s;
+  cursor:pointer;
 }
 
 .container-italia{
@@ -77,6 +78,7 @@ time {
   align-items: flex-end;
   background-color: cornflowerblue;
   transition: ease-in 0.5s;
+  cursor:pointer;
 }
 
 .info-br{
@@ -118,6 +120,7 @@ time {
   margin: 0;
   padding: 0;
   height: 100vh;
+  cursor:pointer;
 }
 
 .shrink{

@@ -1,3 +1,4 @@
+// const arrow = document.querySelector('.arrow-icon');
 const talk = document.querySelector('.talk');
 const containerBR = document.querySelector('.container-brasil');
 const containerIT = document.querySelector('.container-italia');
@@ -8,14 +9,23 @@ talk.addEventListener('click', function expandTalk() {
   if (!this.classList.contains('talk-shrink') && document.querySelectorAll('.expand').length > 0) {
     this.classList.add('talk-zero-height');
     this.classList.add('talk-shrink');
+    // arrow.classList.add('hide');
   } else if (!this.classList.contains('talk-shrink')) {
     this.style.transition = 'ease-in 0.5s';
     this.classList.add('talk-shrink');
+    // arrow.classList.add('hide');
   } else if (this.classList.contains('talk-zero-height')){
     this.classList.remove('talk-zero-height');
     this.classList.remove('talk-shrink');
+    // setTimeout(function() {
+    //   arrow.classList.remove('hide');
+    // }, 500);
+    
   } else {
     this.classList.remove('talk-shrink');
+    // setTimeout(function() {
+    //   arrow.classList.remove('hide');
+    // }, 500);
   }
 });
 

@@ -1,3 +1,8 @@
+/* @keyframes bouncey{
+  0% {top: 0px;}
+  50% {top: 50px;}
+  100% {top: 0px;}
+} */
 html {
   font-family: 'Righteous', cursive;
   font-size: 16px;
@@ -147,4 +152,67 @@ time {
   display: none;
   transition: ease-in 0.5s;
 }
+
+/* .arrow-icon {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2.8em;
+  width: 2.8em;
+  padding: 0.5em;
+  margin: 2em auto;
+  border-radius: 4px;
+  animation: bouncey 2s infinite;
+}
+
+.left-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left:0;
+  width: 40px;
+  height: 10px;
+  display: block;
+  transform: rotate(35deg);
+  float: right;
+  border-radius: 2px;
+}
+.left-bar:after {
+    content:"";
+    background-color: antiquewhite;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+
+.right-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0px;
+  left:26px;
+  width: 40px;
+  height: 10px;
+  display: block;
+  transform: rotate(-35deg);
+  float: right;
+  border-radius: 2px;
+}
+  .right-bar:after {
+    content:"";
+    background-color: antiquewhite;
+    width: 40px;
+    height: 10px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 0.5s;
+    z-index: -1;
+  } */
+
 

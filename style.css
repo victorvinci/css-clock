@@ -13,6 +13,8 @@ h2 {
   font-size: 4.5rem;
   margin: 10px;
   padding: 1px;
+  color: antiquewhite;
+  text-shadow: 25px 60px black;
 }
 
 time {
@@ -21,6 +23,19 @@ time {
   margin: 30px 10px;
   padding: 5px;
   font-size: 10rem;
+  mix-blend-mode: hard-light;
+  letter-spacing: 5px;
+}
+
+.location-br {
+  color: antiquewhite;
+  text-shadow: 10px 10px black;
+  mix-blend-mode: hard-light;
+}
+
+.location-it {
+  color: antiquewhite;
+  text-shadow: -10px 10px black;
   mix-blend-mode: hard-light;
 }
 
@@ -68,6 +83,8 @@ time {
   transition: ease-in 0.5s;
   box-shadow: 10px 10px black;
   mix-blend-mode: hard-light;
+  word-spacing: 15px;
+  letter-spacing: 5px;
 }
 
 .info-it{
@@ -79,10 +96,11 @@ time {
   transition: ease-in 0.5s;
   box-shadow: -10px 10px black;
   mix-blend-mode: hard-light;
+  word-spacing: 15px;
+  letter-spacing: 5px;
 }
 
 .talk{
-  font-family: 'Bungee Shade', cursive;
   letter-spacing: 5px;
   z-index: 5;
   position: absolute;

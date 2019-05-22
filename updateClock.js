@@ -76,7 +76,7 @@ setInterval(getDateIT, 1000);
 
 if (getDateBR() === true && getDateIT() === true){
   talkTime.innerHTML = "TALK TIME";
-  talkTime.style.backgroundColor = "greenyellow";
+  talkTime.style.backgroundColor = "lightgreen";
 } else {
   talkTime.innerHTML = "NOT A GOOD TIME";
   talkTime.style.backgroundColor = "salmon";

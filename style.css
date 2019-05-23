@@ -231,5 +231,41 @@ time {
     transition: all 0.5s;
     z-index: -1;
   } */
+  @media (max-width: 767px ) {
+    
+    html {
+      font-family: 'Righteous', cursive;
+      font-size: 8px;
+    }
 
+    h2{
+      font-size: 3.5rem;
+      text-shadow: 10px 25px black;
+    }
+
+    time {
+      font-size: 7rem;
+      margin-top: 5px;
+    }
+
+    .container-brasil{
+      top: 0;
+    }
+  
+    .container-italia{
+      bottom: 20%;
+    }
+
+    .shrink {
+      height: 40vh;
+      width: 100vw;
+      transition: ease-in 0.5s;
+  }
+
+  .talk-shrink {
+    height: 20vh;
+  }
+
+
+  }
 

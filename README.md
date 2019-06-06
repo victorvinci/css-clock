@@ -1,4 +1,4 @@
-# is it a good time to talk to mozao?
+# is it a good time to talk?
 [check it here](https://is-it-a-good-time.herokuapp.com/)
 
 ![Screenshot](./img/project-ss1.png)

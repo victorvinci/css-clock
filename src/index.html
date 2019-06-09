@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Bungee+Shade|Righteous&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+    />
   </head>
   <body>
     <div class="main-container">
@@ -36,8 +39,8 @@
 
     <h2 class="talk"></h2>
 
-    <script src="src/components/moment.js"></script>
-    <script src="src/components/moment-timezone-with-date.js"></script>
-    <script src="bundle.js"></script>
+    <script src="src/js/moment.js"></script>
+    <script src="src/js/moment-timezone-with-date.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>

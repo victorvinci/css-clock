@@ -1,0 +1,49 @@
+html {
+  font-family: 'Righteous', cursive;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 4.5rem;
+  margin: 10px;
+  padding: 1px;
+  color: antiquewhite;
+  text-shadow: 25px 60px black;
+}
+
+time {
+  background-color: antiquewhite;
+  border-radius: 20px;
+  margin: 30px 10px;
+  padding: 5px;
+  font-size: 10rem;
+  mix-blend-mode: hard-light;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-family: 'Righteous', cursive;
+    font-size: 8px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    text-shadow: 10px 18px black;
+  }
+
+  time {
+    font-size: 7rem;
+    margin-top: 5px;
+  }
+
+  img {
+    width: 130px;
+  }
+}

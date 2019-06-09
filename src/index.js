@@ -1,5 +1,7 @@
-import { transitionOnClick } from './components/transitionsOnClick';
-import { updateClock } from './components/updateClock';
+import './scss/main.scss';
+
+import { transitionOnClick } from './js/transitionsOnClick';
+import { updateClock } from './js/updateClock';
 
 transitionOnClick();
 updateClock();

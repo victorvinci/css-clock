@@ -32,10 +32,10 @@ const updateClock = () => {
 
     if (horaBR > 6 && horaBR <= 18) {
       dayTimeBR.innerHTML = 'There is sun';
-      dayTimePicBR.innerHTML = "<img src='./img/sun.png'>";
+      dayTimePicBR.innerHTML = "<img src='img/sun.png'>";
     } else {
       dayTimeBR.innerHTML = 'Sun is gone';
-      dayTimePicBR.innerHTML = "<img src='./img/moon.png'>";
+      dayTimePicBR.innerHTML = "<img src='img/moon.png'>";
     }
 
     if (horaBR >= 1 && horaBR < 9) {
@@ -73,10 +73,10 @@ const updateClock = () => {
 
     if (horaIT > 6 && horaIT <= 19) {
       dayTimeIT.innerHTML = 'There is sun';
-      dayTimePicIT.innerHTML = "<img src='./img/sun.png'>";
+      dayTimePicIT.innerHTML = "<img src='img/sun.png'>";
     } else {
       dayTimeIT.innerHTML = 'Sun is gone';
-      dayTimePicIT.innerHTML = "<img src='./img/moon.png'>";
+      dayTimePicIT.innerHTML = "<img src='img/moon.png'>";
     }
 
     if (horaIT >= 3 && horaIT < 11) {
